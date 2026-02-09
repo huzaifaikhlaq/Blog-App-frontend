@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BlogContext } from "../context/BlogContext";
 import { AuthContext } from "../context/AuthContext";
 
-// 🔹 Skeleton card for loading state
+// Skeleton card for loading 
 function SkeletonCard() {
     return (
         <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col h-full animate-pulse">
@@ -85,7 +85,7 @@ export default function Home() {
                     </div>
 
                     {user ? (
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                        <div className="flex flex-row items-start sm:items-center gap-2 sm:gap-3">
                             <span className="hidden sm:block text-sm text-gray-600">
                                 Welcome, <b>{user.name}</b>
                             </span>
@@ -105,7 +105,7 @@ export default function Home() {
                             </button>
                         </div>
                     ) : (
-                        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                        <div className="flex flex-row gap-2 sm:gap-3">
                             <Link
                                 to="/login"
                                 className="w-full sm:w-auto px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition text-center"
@@ -115,7 +115,7 @@ export default function Home() {
                             </Link>
                             <Link
                                 to="/signup"
-                                className="w-full sm:w-auto px-5 py-2 rounded-full bg-blue-600 text-white text-sm font-medium shadow-md hover:bg-blue-700 hover:shadow-lg transition text-center"
+                                className="w-full sm:w-auto px-5 py-2 rounded-full bg-blue-600 text-white text-sm font-medium shadow-md hover:bg-blue-700 hover:shadow-lg transition text-center whitespace-nowrap"
                             >
                                 Get Started
                             </Link>

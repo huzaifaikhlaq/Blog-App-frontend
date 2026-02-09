@@ -1,4 +1,4 @@
-const Base_URL = "http://localhost:2009/api/categories";
+const Base_URL = `${import.meta.env.VITE_API_URL}/api/categories`;
 
 // =====Get all categories==== 
 export const getAllCategories = async () => {

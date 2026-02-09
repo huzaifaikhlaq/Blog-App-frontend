@@ -32,5 +32,5 @@ export default function Sidebar({ isOpen, closeSidebar }) {
             </div>
         </div>
     );
-    
+
 }

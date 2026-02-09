@@ -1,4 +1,4 @@
-const Base_URL = "http://localhost:2009/api/auth";
+const Base_URL = `${import.meta.env.VITE_API_URL}/api/auth`;
 
 // ===== SIGNUP =====
 export const signupUser = async (userData) => {

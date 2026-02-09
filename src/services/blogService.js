@@ -1,4 +1,4 @@
-const Base_URL = "http://localhost:2009/api/blogs";
+const Base_URL = `${import.meta.env.VITE_API_URL}/api/blogs`;
 
 // ===== Get all blogs==== 
 export const getAllBlogs = async () => {
