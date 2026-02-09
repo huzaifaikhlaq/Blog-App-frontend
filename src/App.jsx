@@ -13,11 +13,14 @@ export default function App() {
   return (
     <Routes>
 
+      {/* Auth pages */}
       <Route path="/login" element={<PreventAuth><Login /></PreventAuth>} />
       <Route path="/signup" element={<PreventAuth><Signup /></PreventAuth>} />
 
+      {/* Public pages */}
       <Route path="/" element={<Home />} />
 
+      {/* Protected pages */}
       <Route path="/blog/:slug" element={<RequireAuth><BlogDetails /></RequireAuth>} />
 
       <Route path="/*" element={<RequireAuth><Layout /></RequireAuth>}>

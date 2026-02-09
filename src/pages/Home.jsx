@@ -32,11 +32,6 @@ export default function Home() {
     const [search, setSearch] = useState("");
     const [activeCategory, setActiveCategory] = useState("All");
 
-    const handleLogout = () => {
-        logout();
-        navigate("/", { replace: true });
-    };
-
     // Filter only published blogs + search
     const filteredBlogs = blogs.filter(
         blog =>
@@ -98,7 +93,7 @@ export default function Home() {
                             </Link>
 
                             <button
-                                onClick={handleLogout}
+                                onClick={logout}
                                 className="w-full sm:w-auto px-4 py-2 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 transition text-center"
                             >
                                 Logout

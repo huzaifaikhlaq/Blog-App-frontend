@@ -40,9 +40,12 @@ export default function AuthProvider({ children }) {
     };
 
     const logout = () => {
-        sessionStorage.clear(); 
+        sessionStorage.clear();
         setUser(null);
-        navigate("/", { replace: true });
+
+        setTimeout(() => {
+            navigate("/", { replace: true });
+        }, 0);
     };
 
     return (
